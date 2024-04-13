@@ -1,0 +1,27 @@
+.card{
+    border: black;
+    border-width: 1px;
+    border-style: solid;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.deck{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.redCard{
+    color: red;
+}
+
+.blackCard{
+    color: black;
+}
+
+.card_container{
+    display: flex;
+    flex-wrap: wrap;
+}

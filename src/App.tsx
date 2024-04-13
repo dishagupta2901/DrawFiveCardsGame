@@ -1,24 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
 import './App.css';
+import "./Styles/cardStyle.css";
+import DeckComponent from './Components/DeckComponent';
+
 
 function App() {
+  const suits = ["♠︎", "♥︎", "♣︎", "♦︎"];
+  const values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+  const deckArray : any = [];
+    
+    for(let i=0; i< suits.length; i++){
+        for(let j=0; j<values.length; j++){
+            const eachCard = {valName: values[j] , suitIcon: suits[i], isDrawn: false};
+            deckArray.push(eachCard)
+        }
+        // console.log(deckArray);
+        
+    }
+
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        Card Game Loaded!
       </header>
+      <DeckComponent deckArr={deckArray}/>
     </div>
   );
 }
